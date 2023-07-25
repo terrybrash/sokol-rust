@@ -9,6 +9,8 @@ uniform vs_params {
 
 in vec4 position;
 in vec4 color0;
+in mat3 transform; // <--- this is the problem
+in vec4 floooooooooooooh;
 
 out vec4 color;
 

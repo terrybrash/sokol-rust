@@ -92,6 +92,10 @@ extern "C" fn init() {
 
             layout.attrs[shader::ATTR_VS_POSITION].format = sg::VertexFormat::Float3;
             layout.attrs[shader::ATTR_VS_COLOR0].format = sg::VertexFormat::Float4;
+            layout.attrs[shader::ATTR_VS_TRANSFORM + 0].format = sg::VertexFormat::Float3;
+            layout.attrs[shader::ATTR_VS_TRANSFORM + 1].format = sg::VertexFormat::Float3;
+            layout.attrs[shader::ATTR_VS_TRANSFORM + 2].format = sg::VertexFormat::Float3;
+            layout.attrs[shader::ATTR_VS_FLOOOOOOOOOOOOOH].format = sg::VertexFormat::Float4;
 
             layout
         },
