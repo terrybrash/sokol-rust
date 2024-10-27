@@ -58,6 +58,16 @@ extern "C" fn frame(user_data: *mut ffi::c_void) {
         ..Default::default()
     });
     sg::end_pass();
+
+    // Run same pass as above again to trigger an error on Mac:
+    // "Each CAMetalLayerDrawable can only be presented once!"
+    sg::begin_pass(&sg::Pass {
+        action: state.pass_action,
+        swapchain: sglue::swapchain(),
+        ..Default::default()
+    });
+    sg::end_pass();
+
     sg::commit();
 }
 
